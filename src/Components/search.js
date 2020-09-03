@@ -28,21 +28,22 @@ function Search() {
                     <input className="input" type="text" name="query"
                     placeholder="Type to search"
                     value={query} onChange={(e) => setQuery(e.target.value)}
+                    required
                     />
                     <button className="button" type="submit">Search</button>
                 </form>
-                {movies.length > 0 
+                {movies.length > 0
                     ? <div className="card-list">
                         {movies.filter(movie => movie.poster_path).map(movie => (
                             <Card movie={movie} key={movie.id} />
                         ))}
                     </div>
                     : <div className="no-result">
-                        <span className="no-result--emoji" role="img" aria-label="shy emoji">
-                            🥺<br/>
-                            👉👈
-                        </span>
                         <h3>I looked really hard but couldn't find anything. Sorry.</h3>
+                        <span className="no-result--emoji" role="img" aria-label="shy emoji">
+                        &nbsp;&nbsp;🥺<br/>
+                        👉👈
+                        </span>
                     </div>
                 }
             </>

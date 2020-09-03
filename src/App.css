@@ -73,6 +73,7 @@ small {
 
 .card-list {
   margin-top: 4rem;
+  display:grid;
 }
 
 .card {
@@ -100,15 +101,23 @@ small {
 
 .no-result {
   padding: 2rem 4rem;
+  display: grid;
+  grid-template-columns: 10% auto 10%;
 }
 
 .no-result--emoji {
-  font-size: 5rem;
+  font-size: 10rem;
   line-height: 0.5;
+  grid-column-start: 2;
+  justify-self: center;
 }
 
 .no-result h3 {
-  font-size: 2rem;
+  font-size: 3rem;
+  grid-column-start: 2;
+  align-content: center;
+  margin-bottom: 4rem;
+  justify-self: center;
 }
 
 @media (min-width: 786px) {
